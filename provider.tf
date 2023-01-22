@@ -1,11 +1,12 @@
 terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.26.0"
-    }
-  }
-}
+  required_version = ">= 0.13"
+  backend "s3" {}
+} 
+
 provider "aws" {
-  region = var.region
+# Configuration options 
+  assume_role { 
+  role_arn  = var.role_arn
+ } 
+ region   = var.region
 }
