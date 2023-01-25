@@ -21,11 +21,11 @@ variable "scan_on_push" {
   description = "value"
   type        = bool
   default = true
-}/*
+}
 variable "region" {
   description = "value"
   type        = string
-}*/
+}
 variable "role_arn" {
   description = " The ARN of the IAM role"
   type = string
