@@ -1,6 +1,10 @@
-variable "name" {
+variable "no_of_ecrs" {
   description = "value"
-  type        = string
+  type        = number
+}
+variable "ecr_name" {
+  description = "value"
+  type        = list(string)
 }
 variable "force_delete" {
   description = "value"
