@@ -7,4 +7,7 @@ resource "aws_ecr_repository" "container_repository" {
   image_scanning_configuration {
     scan_on_push = true
   }
+    lifecycle {
+    ignore_changes = [tags]
+  }
 }
