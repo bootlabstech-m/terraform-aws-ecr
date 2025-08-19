@@ -12,7 +12,7 @@ resource "aws_ecr_repository" "container_repository" {
   }
   force_delete = var.force_delete
 
-    lifecycle {
+  lifecycle {
     ignore_changes = [tags]
   }
 }
